@@ -1,0 +1,97 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activase - Plataforma de Productos Digitales</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Utilizamos CDN para iconos y animaciones si es necesario -->
+  <script type="module" src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Logo SVG (Placeholder) -->
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" stroke="lime" stroke-width="5" fill="black" />
+        <text x="50%" y="55%" text-anchor="middle" fill="lime" font-size="32px" font-family="sans-serif">A</text>
+      </svg>
+      <h1>Activase</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#autocobro">Auto Cobro</a></li>
+        <li><a href="#admin">Administración</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Sección de productos (se preparan 1000 secciones o sesiones) -->
+    <section id="productos">
+      <h2>Productos Digitales</h2>
+      <div id="productos-container">
+        <!-- Generado dinámicamente por JS para simular las 1000 secciones -->
+      </div>
+    </section>
+
+    <!-- Modulo para el equipo de trabajo -->
+    <section id="equipo">
+      <h2>Equipo de Trabajo</h2>
+      <form id="equipo-form">
+        <label for="correo">Correo del miembro: </label>
+        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+        <button type="submit" class="btn">Agregar Miembro</button>
+      </form>
+      <ul id="lista-equipo">
+        <!-- Lista de miembros agregados -->
+      </ul>
+    </section>
+
+    <!-- Acción de Auto Cobro -->
+    <section id="autocobro">
+      <h2>Auto Cobro</h2>
+      <button id="btn-auto-cobro" class="btn">Ejecutar Auto Cobro</button>
+      <div id="auto-cobro-log">
+        <!-- Registro de transacciones de Auto Cobro -->
+      </div>
+    </section>
+
+    <!-- Área de administración (acceso solo del dueño) -->
+    <section id="admin">
+      <h2>Área de Administración</h2>
+      <form id="admin-login">
+        <label for="admin-email">Correo de Admin:</label>
+        <input type="email" id="admin-email" placeholder="tu_correo@ejemplo.com" required>
+        <label for="admin-pass">Contraseña:</label>
+        <input type="password" id="admin-pass" placeholder="tu_contraseña_secreta" required>
+        <button type="submit" class="btn">Acceder</button>
+      </form>
+      <div id="admin-panel" class="hidden">
+        <h3>Configuración de Plataforma</h3>
+        <div class="admin-config">
+          <label for="producto-precio">Precio de Producto:</label>
+          <input type="number" id="producto-precio" placeholder="0.00">
+        </div>
+        <div class="admin-config">
+          <label for="tarjeta-debito">Número de Tarjeta de Débito:</label>
+          <input type="text" id="tarjeta-debito" placeholder="1234-4567-8910-1112">
+        </div>
+        <div class="admin-config">
+          <label for="logo-upload">Subir Logo:</label>
+          <input type="file" id="logo-upload" accept="image/svg+xml">
+          <small>Utiliza un archivo SVG para mantener la coherencia visual.</small>
+        </div>
+        <div class="admin-config">
+          <button id="guardar-config" class="btn">Guardar Configuración</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Activase. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
